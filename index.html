@@ -119,6 +119,35 @@
   animation: verseSelected 0.3s ease-out;
 }
 
+/* Styling for verse when menu is active (menu selection) */
+.verse-line.menu-selected .verse-text {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* Additional styling for multiple selected verses */
+.verse-line.menu-selected {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 4px;
+}
+
+/* Dark mode adjustments for selected verses */
+.dark .verse-line.menu-selected .verse-text {
+  text-decoration-color: var(--color-accent);
+}
+
+.dark .verse-line.menu-selected {
+  background-color: rgba(96, 165, 250, 0.2);
+}
+
+/* Ensure menu selection underline is removed when highlight is applied */
+.verse-text[class*="highlight-"] {
+  text-decoration: none !important;
+}
+
 @keyframes verseSelected {
   0% {
     background-color: rgba(59, 130, 246, 0.3);
