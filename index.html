@@ -483,18 +483,7 @@
         }
     }
 </script>
-<script>
-// Disable source map requests for external libraries
-if (window.console && console.log) {
-  const originalLog = console.log;
-  console.log = function(...args) {
-    if (!args[0] || typeof args[0] !== 'string' || !args[0].includes('supabase')) {
-      originalLog.apply(console, args);
-    }
-  };
-}
-</script>
-<script src="supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.42.3/dist/umd/supabase.js"></script>
 <script src="script.full-obf.js"></script>
 
 </body>
