@@ -109,6 +109,27 @@
   text-decoration: none !important;
 }
 
+/* Additional styling for the selected verse when viewing full chapter */
+.verse-line.verse-selected {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
+  margin-left: -1rem;
+  border-radius: 0.5rem;
+  animation: verseSelected 0.3s ease-out;
+}
+
+@keyframes verseSelected {
+  0% {
+    background-color: rgba(59, 130, 246, 0.3);
+    transform: translateX(-5px);
+  }
+  100% {
+    background-color: rgba(59, 130, 246, 0.1);
+    transform: translateX(0);
+  }
+}
+
 
     /* jesus words */
 /* .text-red-600 {
@@ -240,7 +261,7 @@
   <div class="relative z-0"> 
     <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 text-gray-100">The Living Word Online</h1>
     <p class="text-base sm:text-1xl lg:text-2xl text-gray-100 mb-6 max-w-xl mx-auto text-center">Search, read, and reflect on verses from the Bible.</p>
-    <a href="javascript:void(0);" onclick="loadGenesis1()" class="inline-block bg-gray-100 text-gray-900 px-6 py-3 rounded hover:bg-gray-200 transition text-sm">Coming Soon</a>
+    <a href="javascript:void(0);" onclick="loadGenesis1()" class="inline-block bg-gray-100 text-gray-900 px-6 py-3 rounded hover:bg-gray-200 transition text-sm">Start Reading</a>
   </div>
 </section>
 
@@ -385,8 +406,8 @@
   <div class="border-t border-theme-border mt-8 pt-6 pb-8 px-4 text-center text-xs flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto space-y-2 md:space-y-0">
     <p>&copy; 2025 The Living Word. All rights reserved. | <a href="#" class="hover:underline">Privacy Policy</a> | <a href="#" class="hover:underline">Terms</a></p>
     <div class="flex space-x-4">
-      <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/facebook.svg" alt="Facebook" class="w-4 h-4 filter dark:invert"></a>
-      <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/twitter.svg" alt="Twitter" class="w-4 h-4 filter dark:invert"></a>
+      <!-- <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/facebook.svg" alt="Facebook" class="w-4 h-4 filter dark:invert"></a> -->
+      <!-- <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/twitter.svg" alt="Twitter" class="w-4 h-4 filter dark:invert"></a> -->
       <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/instagram.svg" alt="Instagram" class="w-4 h-4 filter dark:invert"></a>
       <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/youtube.svg" alt="YouTube" class="w-4 h-4 filter dark:invert"></a>
     </div>
